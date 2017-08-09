@@ -2,7 +2,7 @@
 <% if (productName) { %>Name=<%= productName %>
 <% } %><% if (description) { %>Comment=<%= description %>
 <% } %><% if (genericName) { %>GenericName=<%= genericName %>
-<% } %><% if (name) { %>Exec=sh -c "<%= name %><% if (execArguments && execArguments.length) { %> <%= execArguments.join(' ') %> <% } %> -- %U"
+<% } %><% if (name) { %>Exec=sh -c "<%= name %><% if (execArguments && execArguments.length) { %> <%= execArguments.join(' ') %> <% } %> --user-data-dir=<%= userDataDir %> -- %U"
 <% } %><% if (name) { %>Icon=<%= name %>
 <% } %>Type=Application
 StartupNotify=true
