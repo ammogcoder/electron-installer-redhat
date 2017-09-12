@@ -105,6 +105,7 @@ var getDefaults = function (data, callback) {
       genericName: pkg.genericName || pkg.productName || pkg.name,
       description: pkg.description,
       productDescription: pkg.productDescription || pkg.description,
+      userDataDir: pkg.userDataDir || pkg.name,
       version: pkg.version || '0.0.0',
       revision: pkg.revision || '1',
       license: pkg.license,
